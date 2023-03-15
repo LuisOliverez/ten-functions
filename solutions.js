@@ -95,7 +95,9 @@ console.log(addOne(true));
 console.log(addOne(NaN));
 
 function isEven(singleInput1) {
-    if (!isNaN(Number(singleInput1))){
+    if (typeof singleInput1 === "boolean"){
+        return false;
+    } else if (!isNaN(Number(singleInput1))){
         return Number(singleInput1) % 2 === 0;
         }else {
         return false;
